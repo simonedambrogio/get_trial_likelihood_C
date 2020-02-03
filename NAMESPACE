@@ -1,0 +1,3 @@
+useDynLib(get_trial_likelihood_C, .registration=TRUE)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
