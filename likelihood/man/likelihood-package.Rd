@@ -1,6 +1,6 @@
-\name{get_trial_likelihood_C-package}
-\alias{get_trial_likelihood_C-package}
-\alias{get_trial_likelihood_C}
+\name{likelihood-package}
+\alias{likelihood-package}
+\alias{likelihood}
 \docType{package}
 \title{
   A short title line describing what the package does

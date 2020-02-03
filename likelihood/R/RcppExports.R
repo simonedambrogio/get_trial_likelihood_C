@@ -2,6 +2,6 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 likelihood <- function(media, correctedFixTime, tim, sum_correctedFixTime, stateStep, changeMatrix, prStates, sigma, changeUp, changeDown) {
-    .Call(`_get_trial_likelihood_C_likelihood`, media, correctedFixTime, tim, sum_correctedFixTime, stateStep, changeMatrix, prStates, sigma, changeUp, changeDown)
+    .Call(`_likelihood_likelihood`, media, correctedFixTime, tim, sum_correctedFixTime, stateStep, changeMatrix, prStates, sigma, changeUp, changeDown)
 }
 

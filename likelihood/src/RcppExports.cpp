@@ -7,7 +7,7 @@ using namespace Rcpp;
 
 // likelihood
 NumericVector likelihood(NumericVector media, NumericVector correctedFixTime, NumericVector tim, int sum_correctedFixTime, double stateStep, NumericMatrix changeMatrix, NumericMatrix prStates, double sigma, NumericMatrix changeUp, NumericMatrix changeDown);
-RcppExport SEXP _get_trial_likelihood_C_likelihood(SEXP mediaSEXP, SEXP correctedFixTimeSEXP, SEXP timSEXP, SEXP sum_correctedFixTimeSEXP, SEXP stateStepSEXP, SEXP changeMatrixSEXP, SEXP prStatesSEXP, SEXP sigmaSEXP, SEXP changeUpSEXP, SEXP changeDownSEXP) {
+RcppExport SEXP _likelihood_likelihood(SEXP mediaSEXP, SEXP correctedFixTimeSEXP, SEXP timSEXP, SEXP sum_correctedFixTimeSEXP, SEXP stateStepSEXP, SEXP changeMatrixSEXP, SEXP prStatesSEXP, SEXP sigmaSEXP, SEXP changeUpSEXP, SEXP changeDownSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -27,11 +27,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_get_trial_likelihood_C_likelihood", (DL_FUNC) &_get_trial_likelihood_C_likelihood, 10},
+    {"_likelihood_likelihood", (DL_FUNC) &_likelihood_likelihood, 10},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_get_trial_likelihood_C(DllInfo *dll) {
+RcppExport void R_init_likelihood(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
