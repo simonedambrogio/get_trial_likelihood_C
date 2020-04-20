@@ -53,7 +53,11 @@ NumericVector likelihood(NumericVector media, NumericVector correctedFixTime, Nu
   probUpCrossing[time] = tempUpCross_f[time];
   probDownCrossing[time] = tempDownCross_f[time];
   }
+  
   NumericVector result = {probUpCrossing[sum_correctedFixTime-1], probDownCrossing[sum_correctedFixTime-1]};
+  
+  if (result[1] < 1e-10) result = 1e-10;
+  if (result[2] < 1e-10) result = 1e-10;
   
   return(result);
 }  
